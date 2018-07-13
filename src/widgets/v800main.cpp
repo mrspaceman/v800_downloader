@@ -99,6 +99,8 @@ V800Main::V800Main(QWidget *parent) :
         usb = new V800usb(V800);
     else if(selected_device == tr("M400"))
         usb = new V800usb(M400);
+    else if(selected_device == tr("V650"))
+        usb = new V800usb(M400);
     usb->moveToThread(usb_thread);
 
     connect(usb, SIGNAL(all_sessions(QList<QString>)), this, SLOT(handle_all_sessions(QList<QString>)));

@@ -13,6 +13,8 @@ TEMPLATE = app
 
 DEFINES += QT_NO_CAST_FROM_ASCII QT_NO_CAST_TO_ASCII
 
+# QMAKE_CXXFLAGS += -fPIC
+
 CONFIG(debug,debug|release) DESTDIR = debug
 CONFIG(release,debug|release) DESTDIR = release
 MOC_DIR = $$DESTDIR/tmp
